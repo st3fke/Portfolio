@@ -1,4 +1,51 @@
-# Hi, I'm Stefan Sofronijević 👋
+import { Flex, Box } from "theme-ui"
 
-A passionate Software Engineering student from Serbia with hands-on experience in software development, robotics, and AI.  
-I enjoy solving complex problems, building creative digital solutions, and exploring how emerging technologies can positively impact communities.
+<Flex
+  sx={{
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    mt: 4,
+  }}
+>
+  <Box sx={{ flex: ["1 1 100%", "1 1 50%"], pr: [0, 4] }}>
+    # Hi, I'm Stefan Sofronijević 👋
+
+    A Software Engineering student passionate about building creative and practical digital solutions.  
+  </Box>
+
+  <Box
+    sx={{
+      flex: ["1 1 100%", "1 1 40%"],
+      mt: [4, 0],
+      textAlign: "center",
+      display: "flex",
+      justifyContent: "center",
+    }}
+  >
+    <div
+      style={{
+        width: "400px",   // povećano
+        height: "420px",
+        background: "linear-gradient(135deg, #00c9ff, #92fe9d)", // border color
+        padding: "10px",
+        clipPath:
+          "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)", // hexagon na špic
+      }}
+    >
+      <img
+        src="/author.jpg"
+        alt="Stefan Sofronijević"
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center 20%",
+          display: "block",
+          clipPath:
+            "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)", // isti zarotirani hexagon
+        }}
+      />
+    </div>
+  </Box>
+</Flex>
