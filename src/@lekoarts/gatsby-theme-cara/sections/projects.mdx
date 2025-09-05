@@ -1,206 +1,115 @@
-<ProjectCard
-  title="DeepHunt"
-  link="/deephunt"
-  bg="linear-gradient(135deg, #16222A 0%, #3A6073 100%)"
-sx={{
-  p: 4,
-  borderRadius: "16px",
-  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-  transition: "all 0.3s ease",
-  transform: "translateY(0) scale(1)",
-  minHeight: "420px", // ✅ sve kartice imaju istu visinu
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  "&:hover": {
-    transform: "translateY(-10px) scale(1.05)",
-    boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
-  },
-}}
->
-  <img
-    src="/deephunt.png"
-    alt="DeepHunt"
-    style={{
-      width: "100%",
-      height: "350px",         // ✅ fiksna visina za sve slike
-    objectFit: "cover",  
-      borderRadius: "12px",
-      marginBottom: "16px",
-    }}
-  />
-Unity-based 2D diving game with immersive gameplay and custom shaders.
-</ProjectCard>
+import React from "react"
+import { Link } from "gatsby"
 
-<ProjectCard
-  title="Geo Quest"
-  link="https://github.com/didy13/GeoQuest"
-  bg="linear-gradient(135deg, #232526 0%, #414345 100%)"
-sx={{
-  p: 4,
-  borderRadius: "16px",
-  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-  transition: "all 0.3s ease",
-  transform: "translateY(0) scale(1)",
-  minHeight: "420px", // ✅ sve kartice imaju istu visinu
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  "&:hover": {
-    transform: "translateY(-10px) scale(1.05)",
-    boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
+const projects = [
+  {
+    title: "DeepHunt",
+    link: "/deephunt",
+    bg: "linear-gradient(135deg, #16222A 0%, #3A6073 100%)",
+    img: "/deephunt.png",
+    desc: "Unity-based 2D diving game with immersive gameplay and custom shaders.",
   },
-}}
->
-  <img
-    src="/geoquest.png"
-    alt="DeepHunt"
-    style={{
-      width: "100%",
-      height: "350px",         // ✅ fiksna visina za sve slike
-    objectFit: "cover",  
-      borderRadius: "12px",
-      marginBottom: "16px",
-    }}
-  />
-Web app built with ElizaOS and DKG, generating personalized travel recommendations using AI and knowledge graphs.
-</ProjectCard>
-<ProjectCard
-  title="PlumITV"
-  link="/plumitv"
-  bg="linear-gradient(135deg, #283048 0%, #859398 100%)"
-sx={{
-  p: 4,
-  borderRadius: "16px",
-  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-  transition: "all 0.3s ease",
-  transform: "translateY(0) scale(1)",
-  minHeight: "420px", // ✅ sve kartice imaju istu visinu
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  "&:hover": {
-    transform: "translateY(-10px) scale(1.05)",
-    boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
+  {
+    title: "Geo Quest",
+    link: "/geoquest",
+    bg: "linear-gradient(135deg, #232526 0%, #414345 100%)",
+    img: "/geoquest.png",
+    desc: "Web app built with ElizaOS and DKG, generating personalized travel recommendations using AI and knowledge graphs.",
   },
-}}
->
-  <img
-    src="/plumitv.png"
-    alt="PlumITV"
-    style={{
-      width: "100%",
-      height: "350px",         // ✅ fiksna visina za sve slike
-    objectFit: "cover",  
-      borderRadius: "12px",
-      marginBottom: "16px",
-    }}
-  />
-Responsive website redesign using Bootstrap, improving UI/UX and mobile compatibility.
-</ProjectCard>
-
-<ProjectCard
-  title="KaficNode"
-  link="https://github.com/st3fke/KaficNode"
-  bg="linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)"
-sx={{
-  p: 4,
-  borderRadius: "16px",
-  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-  transition: "all 0.3s ease",
-  transform: "translateY(0) scale(1)",
-  minHeight: "420px", // ✅ sve kartice imaju istu visinu
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  "&:hover": {
-    transform: "translateY(-10px) scale(1.05)",
-    boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
+  {
+    title: "PlumITV",
+    link: "/plumitv",
+    bg: "linear-gradient(135deg, #283048 0%, #859398 100%)",
+    img: "/plumitv.png",
+    desc: "Responsive website redesign using Bootstrap, improving UI/UX and mobile compatibility.",
   },
-}}
->
-  <img
-    src="/kaficnode.png"
-    alt="KaficNode"
-    style={{
-      width: "100%",
-      height: "350px",         // ✅ fiksna visina za sve slike
-    objectFit: "cover",
-    objectPosition: "center 0%",  
-      borderRadius: "12px",
-      marginBottom: "16px",
-    }}
-  />
-Node.js web application designed for a coffee shop, featuring order management and EJS templates.
-</ProjectCard>
-
-
-
-<ProjectCard
-  title="EthCrawler"
-  link="https://github.com/st3fke/EthCrawler"
-  bg="linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%)"
-sx={{
-  p: 4,
-  borderRadius: "16px",
-  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-  transition: "all 0.3s ease",
-  transform: "translateY(0) scale(1)",
-  minHeight: "420px", // ✅ sve kartice imaju istu visinu
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  "&:hover": {
-    transform: "translateY(-10px) scale(1.05)",
-    boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
+  {
+    title: "KaficNode",
+    link: "/kaficnode",
+    bg: "linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%)",
+    img: "/kaficnode.png",
+    desc: "Node.js web application designed for a coffee shop, featuring order management and EJS templates.",
   },
-}}
->
-  <img
-    src="/ethhome.png"
-    alt="EthCrawler"
-    style={{
-      width: "100%",
-      height: "350px",         // ✅ fiksna visina za sve slike
-    objectFit: "cover",  
-      borderRadius: "12px",
-      marginBottom: "16px",
-    }}
-  />
-Node.js application for exploring Ethereum transactions, allowing users to view wallet activity from any block onward.
-</ProjectCard>
-
-<ProjectCard
-  title="Mastermind"
-  link="https://github.com/st3fke/mastermind"
-  bg="linear-gradient(135deg, #1f1c2c 0%, #928dab 100%)"
-sx={{
-  p: 4,
-  borderRadius: "16px",
-  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-  transition: "all 0.3s ease",
-  transform: "translateY(0) scale(1)",
-  minHeight: "420px", // ✅ sve kartice imaju istu visinu
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  "&:hover": {
-    transform: "translateY(-10px) scale(1.05)",
-    boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
+  {
+    title: "EthCrawler",
+    link: "/ethcrawler",
+    bg: "linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%)",
+    img: "/ethhome.png",
+    desc: "Node.js application for exploring Ethereum transactions, allowing users to view wallet activity from any block onward.",
   },
-}}
->
-  <img
-    src="/mastermind.png"
-    alt="Mastermind"
-    style={{
-      width: "100%",
-      height: "350px",         // ✅ fiksna visina za sve slike
-    objectFit: "cover",  
-    objectPosition: "center 10%",
-      borderRadius: "12px",
-      marginBottom: "16px",
-    }}
-  />
-A desktop Java implementation of the classic logic puzzle game, featuring custom UI and game mechanics.
-</ProjectCard>
+  {
+    title: "Mastermind",
+    link: "/mastermind",
+    bg: "linear-gradient(135deg, #1f1c2c 0%, #928dab 100%)",
+    img: "/mastermind.png",
+    desc: "A desktop Java implementation of the classic logic puzzle game, featuring custom UI and game mechanics.",
+  },
+]
+
+const ProjectsPage = () => {
+  return (
+    <div
+      style={{
+        maxWidth: "1200px",
+        margin: "0 auto",
+        padding: "40px 20px",
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+        gap: "24px",
+        justifyItems: "center", // centriranje kartica
+      }}
+    >
+      {projects.map(project => (
+        <Link
+          key={project.title}
+          to={project.link}
+          style={{ textDecoration: "none" }}
+        >
+          <div
+            style={{
+              width: "320px",           // ✅ sve kartice iste širine
+              height: "480px",          // ✅ fiksna visina za sve kartice
+              background: project.bg,
+              padding: "16px",
+              borderRadius: "16px",
+              boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+              transition: "all 0.3s ease",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              cursor: "pointer",
+            }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = "translateY(-10px) scale(1.05)"
+              e.currentTarget.style.boxShadow = "0 12px 28px rgba(0,0,0,0.25)"
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = "translateY(0) scale(1)"
+              e.currentTarget.style.boxShadow = "0 6px 18px rgba(0,0,0,0.15)"
+            }}
+          >
+            <img
+              src={project.img}
+              alt={project.title}
+              style={{
+                width: "100%",
+                height: "350px",   // fiksna visina slike
+                objectFit: "cover",
+                borderRadius: "12px",
+                marginBottom: "16px",
+              }}
+            />
+            <h3 style={{ margin: "0 0 8px 0", color: "#fff", textAlign: "center" }}>
+              {project.title}
+            </h3>
+            <p style={{ margin: 0, color: "#fff", textAlign: "center", flexGrow: 1 }}>
+              {project.desc}
+            </p>
+          </div>
+        </Link>
+      ))}
+    </div>
+  )
+}
+
+export default ProjectsPage
