@@ -18,6 +18,7 @@ import { Flex, Box } from "theme-ui"
     applications.
 
     ### 💻 Skills
+    {/* Languages */}
     <Flex sx={{ flexWrap: "wrap", gap: 2, mb: 3 }}>
       {["C/C++", "Java", "C#", "JavaScript", "TypeScript", "Python"].map(
         (skill) => (
@@ -34,6 +35,14 @@ import { Flex, Box } from "theme-ui"
               fontWeight: "bold",
               color: "text",
               boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+              transition: "all 0.2s ease",
+              cursor: "default",
+              "&:hover": {
+                bg: "primary",
+                color: "background",
+                transform: "scale(1.05)",
+                boxShadow: "0 6px 12px rgba(0,0,0,0.2)",
+              },
             }}
           >
             {skill}
@@ -42,48 +51,76 @@ import { Flex, Box } from "theme-ui"
       )}
     </Flex>
 
+    {/* Tools */}
     <Flex sx={{ flexWrap: "wrap", gap: 2, mb: 3 }}>
-      {["Node.js", "Unity", "Arduino", "Xamarin", "Bootstrap"].map((tool) => (
-        <Box
-          key={tool}
-          sx={{
-            px: 3,
-            py: 1,
-            bg: "background",
-            border: "2px solid",
-            borderColor: "secondary",
-            borderRadius: "8px",
-            fontSize: 1,
-            fontWeight: "bold",
-            color: "text",
-          }}
-        >
-          {tool}
-        </Box>
-      ))}
-    </Flex>
-
-    <Flex sx={{ flexWrap: "wrap", gap: 2 }}>
-      {["MySQL", "MongoDB", "MS SQL Server", "MS Access", "Git", "Jira", "Postman"].map(
-        (db) => (
+      {["Node.js", "Unity", "React", "Xamarin", "Bootstrap", "EJS"].map(
+        (tool) => (
           <Box
-            key={db}
+            key={tool}
             sx={{
               px: 3,
               py: 1,
               bg: "background",
               border: "2px solid",
-              borderColor: "highlight",
+              borderColor: "secondary",
               borderRadius: "8px",
               fontSize: 1,
               fontWeight: "bold",
               color: "text",
+              boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+              transition: "all 0.2s ease",
+              cursor: "default",
+              "&:hover": {
+                bg: "secondary",
+                color: "background",
+                transform: "scale(1.05)",
+                boxShadow: "0 6px 12px rgba(0,0,0,0.2)",
+              },
             }}
           >
-            {db}
+            {tool}
           </Box>
         )
       )}
+    </Flex>
+
+    {/* Databases & Collaboration */}
+    <Flex sx={{ flexWrap: "wrap", gap: 2 }}>
+      {[
+        "MySQL",
+        "MongoDB",
+        "MS SQL Server",
+        "MS Access",
+        "Git",
+        "Jira",
+        "Postman",
+      ].map((db) => (
+        <Box
+          key={db}
+          sx={{
+            px: 3,
+            py: 1,
+            bg: "background",
+            border: "2px solid",
+            borderColor: "highlight",
+            borderRadius: "8px",
+            fontSize: 1,
+            fontWeight: "bold",
+            color: "text",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+            transition: "all 0.2s ease",
+            cursor: "default",
+            "&:hover": {
+              bg: "highlight",
+              color: "background",
+              transform: "scale(1.05)",
+              boxShadow: "0 6px 12px rgba(0,0,0,0.2)",
+            },
+          }}
+        >
+          {db}
+        </Box>
+      ))}
     </Flex>
 
     ### ⚡ What drives me
@@ -91,7 +128,7 @@ import { Flex, Box } from "theme-ui"
     creativity.  
   </Box>
 
-  <Box
+    <Box
     sx={{
       flex: ["1 1 100%", "1 1 40%"],
       mt: [4, 0],
@@ -100,16 +137,7 @@ import { Flex, Box } from "theme-ui"
       justifyContent: "center",
     }}
   >
-    <div
-      style={{
-        width: "400px",
-        height: "420px",
-        background: "linear-gradient(135deg, #00c9ff, #92fe9d)",
-        padding: "10px",
-        clipPath:
-          "polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%)",
-      }}
-    >
+    <div className="hexagon-wrapper">
       <img
         src="/author.jpg"
         alt="Stefan Sofronijević"
@@ -125,4 +153,51 @@ import { Flex, Box } from "theme-ui"
       />
     </div>
   </Box>
+
+  {/* Stilovi */}
+  <style>
+    {`
+      .hexagon-wrapper {
+        width: 400px;
+        height: 420px;
+        position: relative;
+        background: linear-gradient(135deg, #00c9ff, #92fe9d);
+        padding: 10px;
+        clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+        overflow: hidden;
+      }
+
+      .hexagon-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        clip-path: inherit;
+      }
+
+      .hexagon-wrapper:hover img {
+        transform: scale(1.1);
+      }
+
+      .hexagon-wrapper::after {
+        content: "Stefan Sofronijević";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        clip-path: inherit;
+      }
+
+      .hexagon-wrapper:hover::after {
+        opacity: 1;
+      }
+    `}
+  </style>
 </Flex>

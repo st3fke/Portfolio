@@ -21,7 +21,8 @@
     "gatsby-plugin-manifest": "^5.14.0",
     "gatsby-plugin-webpack-statoscope": "^1.0.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-parallax-tilt": "^1.7.307"
   },
   "devDependencies": {
     "@types/node": "^22.15.33",
